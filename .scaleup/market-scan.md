@@ -272,6 +272,8 @@ Player Two has no body face. These are candidates only. I checked the licence fr
 | IBM Plex Sans | OFL-1.1 (fontsource v5.3.0) | A faint technical flavour, which could echo the game or terminal theme |
 | Inter | OFL-1.1 (fontsource v5.3.0) | Very common. Used as a headline face at TradeOps, so it is the least distinctive |
 
+> **Correction (19 Oct 2026, design-context stage):** the paragraph below is wrong. The supplied font file's own metadata reads "© Matsero. All Rights Reserved" and "Chunk is a trademark of Matsero" (v1.000, 2025). It is a commercial font, not the League of Moveable Type OFL release, and it is a heavy display sans, not a slab. See DESIGN.md, Typography.
+
 **Chunk licence, still open (intake flag 6).** A web search describes "Chunk" (a heavy slab by Meredith Mandel, League of Moveable Type) as licensed under the OFL. But the supplied folder (`Chunk.otf`, `.ttf`, `.woff`, `.woff2`) contains no licence file, and I cannot confirm the supplied files are that exact release. Treat as probably fine, unconfirmed.
 
 ### 4.3 Contrast of the locked palette (computed by me, not extracted)

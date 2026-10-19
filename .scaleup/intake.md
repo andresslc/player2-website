@@ -62,7 +62,7 @@ Contrast ratios have not been checked yet. That happens in design-context.
 | 3 | **Guarantee** ("we keep working free until it does") is a recommendation that depends on whether the team can honour it. Don't publish without sign-off | David sign-off |
 | 4 | **Third-party stats** (MIT/InsideSales "21x", 411 Locals 37.8%, BrightLocal 45%, Journal of Marketing referral study). The docx itself flags these as industry-repeated and says to verify before citing. If used, cite the source on the page and verify first | Verify before use |
 | 5 | **Name inconsistency.** The logo reads "PLAYER TWO / GROWTH HOUSE", the copy reads "Player 2: Growth House". Need a decision on how the name is written in text | User |
-| 6 | **Font licence.** Confirm the `Chunk` licence allows web embedding. The secondary/body typeface isn't defined in the kit | User |
+| 6 | **Font licence.** The supplied `Chunk` files say "© Matsero. All Rights Reserved" and "Chunk is a trademark of Matsero" (v1.000, 2025; read from the font's name table on 19 Oct 2026). **It is a commercial font, not the OFL "Chunk Five".** It needs a web-embedding licence before public launch. The font files are not committed. Body and HUD faces are proposed in DESIGN.md (OFL) | User. **Blocks launch** |
 | 7 | **Unknown contact details.** Domain, email, phone, booking link and Recon Call scheduler are not in the source. Placeholder all of them | User |
 | 8 | **Language.** English by default (target market reads as US: US LLC plan, US clients). Spanish only if specified | Default |
 | 9 | **"Leak Report" / "Unlocked Growth" diagnostic calculator** is recommended as the lead magnet. It's a scope decision for spec-app, and any dollar output it produces is an estimate and must be labelled as one | spec-app |
