@@ -472,7 +472,7 @@ Small and purposeful (proposed):
 | Gap | Why it matters |
 |---|---|
 | **Chunk web licence** | Blocks public launch, not the build |
-| How the name is written in text: "Player Two" (logo) or "Player 2" (client copy) | This file uses "Player Two" provisionally |
+| ~~How the name is written in text~~ | **Decided 19 Oct 2026: "Player Two Growth House"** in body text. Logo artwork unchanged. HUD taglines like "PRESS START FOR PLAYER TWO" stay as game lines |
 | Thin grid lines through the "PLAYER TWO" letters in both wordmarks | They're in the original PDF too. Intentional texture or leftover construction guides? Designer to confirm, or supply a clean export |
 | A standalone mascot (frog without the badge ring), the sprout icon, and four pixel icons for the leak cards | Not in the brand kit. Ask the designer, or we extract and draw them for sign-off |
 | Favicon and social sharing image | Not in the kit. Proposed source: `badge-color.svg` |
