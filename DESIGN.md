@@ -2,7 +2,7 @@
 version: alpha
 name: Player Two Growth House
 description: >-
-  SEED, awaiting client sign-off. Marketing site for a diagnose-first growth
+  Approved by the client on 2026-10-19. Marketing site for a diagnose-first growth
   partner to owner-run local service businesses. Direction: a mix of
   market-scan A (Plain Numbers) and B (Co-op Mode). It looks like a game and
   talks like a contractor. Colours come from the client's brand board; the
@@ -249,7 +249,7 @@ components:
 
 # Player Two: Growth House
 
-> **Status: SEED, awaiting client sign-off.** Do not build from this file until the client has reviewed it.
+> **Status: APPROVED by the client on 19 Oct 2026** (reply: "approve"). The open gaps at the end of this file are still open; approval covers the direction, tokens and components.
 > Values marked **locked** come from the client's brand board (`Player Two.pdf`, read 19 Oct 2026). Values marked **proposed** are ours and are open to change.
 > Supporting evidence: `.scaleup/intake.md` and `.scaleup/market-scan.md`.
 > Linted with `@google/design.md@0.4.0` (pinned; the spec is alpha). The exported Tailwind theme, not this file, is the build's input.
