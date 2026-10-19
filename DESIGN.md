@@ -122,6 +122,17 @@ spacing:
   shadow-offset: 6px
   pixel: 4px
   tap-min: 48px
+  control-lg: 56px
+  control-md: 52px
+  header: 88px
+  header-sm: 80px
+  level-node: 56px
+  icon: 32px
+  cartridge-stripe: 14px
+  track: 4px
+  wordmark-min: 140px
+  badge-lg: 440px
+  badge-sm: 120px
 components:
   button-primary:
     backgroundColor: "{colors.leaf}"
@@ -356,6 +367,8 @@ Three faces, each with one job:
 ## Layout
 
 **Grid.** A single fluid column on phones with a 16px side gutter. On desktop, a 12-column grid up to `container-max` (1180px) with 32px gutters. Breakpoints (proposed): 640px, 1024px, 1280px. The page never scrolls sideways.
+
+**Component sizes** (added during build, 19 Oct 2026, so no component needs a raw value): `control-lg` 56px buttons, `control-md` 52px inputs, `header` 88px / `header-sm` 80px, `level-node` 56px, `icon` 32px, `cartridge-stripe` 14px, `track` 4px level-map line, `wordmark-min` 140px, `badge-lg` 440px hero badge, `badge-sm` 120px.
 
 **Spacing.** An 8px scale with a 4px half-step (`xs` to `3xl`). Sections are 96px apart on desktop and 64px on phones. Inside cards, 24px. Tap targets are at least 48px (`tap-min`).
 

@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/*
+ * Chunk (Matsero) is a commercial font with an unconfirmed web licence (DESIGN.md, Typography).
+ * The file is not committed: copy Chunk.woff2 into public/fonts/chunk/ locally. Without it the
+ * DESIGN.md fallback stack renders and the request 404s, which is expected.
+ */
+@font-face {
+  font-family: "Chunk";
+  src: url("/fonts/chunk/Chunk.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Sticker depth from DESIGN.md "Elevation & Depth": solid ink offset, no blur. */
+@theme {
+  --shadow-sticker: var(--spacing-shadow-offset) var(--spacing-shadow-offset) 0 var(--color-ink);
+  --shadow-sticker-pressed: calc(var(--spacing-shadow-offset) / 2) calc(var(--spacing-shadow-offset) / 2) 0 var(--color-ink);
+  --shadow-sticker-forest: var(--spacing-shadow-offset) var(--spacing-shadow-offset) 0 var(--color-forest);
+  --shadow-rule: 0 var(--spacing-stroke) 0 var(--color-ink);
+  /* DESIGN.md Layout breakpoints (proposed): 640 / 1024 / 1280. Defaults removed so nothing else exists. */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1280px;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    scroll-padding-top: var(--spacing-header);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-body-md);
+    font-size: var(--text-body-md);
+    line-height: 1.6;
+  }
+
+  p,
+  li,
+  dd {
+    text-wrap: pretty;
+  }
+
+  h3 {
+    text-wrap: balance;
+  }
+
+  a {
+    color: var(--color-link);
+    text-underline-offset: 0.18em;
+  }
+
+  /* DESIGN.md Components, "Focus": ink ring with a cream gap on light, spark ring on dark. */
+  :focus-visible {
+    outline: var(--spacing-stroke) solid var(--color-ink);
+    outline-offset: var(--spacing-stroke);
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--color-spark);
+  }
+
+  /* Cream panels inside dark bands (calculator, email form) go back to light-surface rules. */
+  .on-light :focus-visible {
+    outline-color: var(--color-ink);
+  }
+
+  /* Sticker edge: ink on light surfaces; cream outline and forest shadow on dark bands. */
+  .on-dark {
+    --sticker-edge: var(--color-cream);
+    --sticker-shadow: var(--color-forest);
+  }
+
+  .on-light {
+    --sticker-edge: var(--color-ink);
+    --sticker-shadow: var(--color-ink);
+  }
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Stroke widths from DESIGN.md spacing tokens (border widths don't read the spacing scale). */
+@utility border-stroke {
+  border-width: var(--spacing-stroke);
+}
+
+@utility border-stroke-heavy {
+  border-width: var(--spacing-stroke-heavy);
+}
+
+@utility border-b-stroke {
+  border-bottom-width: var(--spacing-stroke);
+}
+
+@utility border-t-stroke {
+  border-top-width: var(--spacing-stroke);
+}
+
+@utility outline-stroke {
+  outline-style: solid;
+  outline-width: var(--spacing-stroke);
+  outline-offset: var(--spacing-stroke);
+}
+
+/* DESIGN.md Elevation: on press the element moves half the shadow offset and the shadow shrinks. */
+@utility sticker-press {
+  border-color: var(--sticker-edge, var(--color-ink));
+  box-shadow: var(--spacing-shadow-offset) var(--spacing-shadow-offset) 0 var(--sticker-shadow, var(--color-ink));
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out, background-color 150ms ease-out;
+
+  &:active {
+    transform: translate(calc(var(--spacing-shadow-offset) / 2), calc(var(--spacing-shadow-offset) / 2));
+    box-shadow: calc(var(--spacing-shadow-offset) / 2) calc(var(--spacing-shadow-offset) / 2) 0 var(--sticker-shadow, var(--color-ink));
+  }
+}
+
+/* Hero sparkles twinkle once on load (DESIGN.md Motion). */
+@keyframes twinkle-once {
+  0% {
+    transform: scale(0.4) rotate(-20deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15) rotate(6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@utility animate-twinkle-once {
+  animation: twinkle-once 700ms ease-out 200ms both;
+}
+
+/* Pixel-stepped corners for game devices only (DESIGN.md Shapes): a 2-step stair of --spacing-pixel. */
+@utility pixel-corners {
+  --p: var(--spacing-pixel);
+  clip-path: polygon(
+    calc(var(--p) * 2) 0, calc(100% - var(--p) * 2) 0, calc(100% - var(--p) * 2) var(--p),
+    calc(100% - var(--p)) var(--p), calc(100% - var(--p)) calc(var(--p) * 2), 100% calc(var(--p) * 2),
+    100% calc(100% - var(--p) * 2), calc(100% - var(--p)) calc(100% - var(--p) * 2),
+    calc(100% - var(--p)) calc(100% - var(--p)), calc(100% - var(--p) * 2) calc(100% - var(--p)),
+    calc(100% - var(--p) * 2) 100%, calc(var(--p) * 2) 100%, calc(var(--p) * 2) calc(100% - var(--p)),
+    var(--p) calc(100% - var(--p)), var(--p) calc(100% - var(--p) * 2), 0 calc(100% - var(--p) * 2),
+    0 calc(var(--p) * 2), var(--p) calc(var(--p) * 2), var(--p) var(--p), calc(var(--p) * 2) var(--p)
+  );
+}

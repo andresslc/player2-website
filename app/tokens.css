@@ -1,0 +1,185 @@
+/* GENERATED from DESIGN.md by scripts/tokens.mjs. Do not edit; run `npm run tokens`. */
+@theme {
+  --color-*: initial;
+  --radius-*: initial;
+  --font-*: initial;
+  --color-ink: #273835;
+  --color-forest: #1f6a56;
+  --color-leaf: #55b948;
+  --color-cream: #ece8d8;
+  --color-cream-2: #ded7bc;
+  --color-tan: #d6ab7b;
+  --color-tan-dark: #ba8d62;
+  --color-spark: #fec00e;
+  --color-error: #a8321e;
+  --color-primary: #273835;
+  --color-secondary: #1f6a56;
+  --color-tertiary: #55b948;
+  --color-surface: #ece8d8;
+  --color-surface-raised: #ded7bc;
+  --color-surface-dark: #273835;
+  --color-on-surface: #273835;
+  --color-on-surface-dark: #ece8d8;
+  --color-link: #1f6a56;
+  --font-headline-display: "Chunk", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-headline-lg: "Chunk", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-headline-md: "Chunk", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-headline-sm: "Chunk", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-title-md: "Chunk", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-body-lg: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body-md: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body-sm: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body-strong: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-label-lg: "Chunk", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-label-md: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hud-md: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-hud-score: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --text-headline-display: 64px;
+  --text-headline-lg: 44px;
+  --text-headline-md: 32px;
+  --text-headline-sm: 24px;
+  --text-title-md: 20px;
+  --text-body-lg: 21px;
+  --text-body-md: 18px;
+  --text-body-sm: 16px;
+  --text-body-strong: 18px;
+  --text-label-lg: 18px;
+  --text-label-md: 16px;
+  --text-hud-md: 14px;
+  --text-hud-score: 56px;
+  --tracking-headline-display: -0.01em;
+  --tracking-headline-lg: -0.005em;
+  --tracking-label-lg: 0.01em;
+  --tracking-hud-md: 0.08em;
+  --tracking-hud-score: -0.02em;
+  --radius-none: 0px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 96px;
+  --spacing-gutter: 16px;
+  --spacing-gutter-lg: 32px;
+  --spacing-container-max: 1180px;
+  --spacing-prose-max: 680px;
+  --spacing-stroke: 3px;
+  --spacing-stroke-heavy: 4px;
+  --spacing-shadow-offset: 6px;
+  --spacing-pixel: 4px;
+  --spacing-tap-min: 48px;
+  --spacing-control-lg: 56px;
+  --spacing-control-md: 52px;
+  --spacing-header: 88px;
+  --spacing-header-sm: 80px;
+  --spacing-level-node: 56px;
+  --spacing-icon: 32px;
+  --spacing-cartridge-stripe: 14px;
+  --spacing-track: 4px;
+  --spacing-wordmark-min: 140px;
+  --spacing-badge-lg: 440px;
+  --spacing-badge-sm: 120px;
+}
+
+@utility type-headline-display {
+  font-family: var(--font-headline-display);
+  font-size: clamp(38px, calc(38px + 26 * (100vw - 390px) / 890), 64px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+@utility type-headline-lg {
+  font-family: var(--font-headline-lg);
+  font-size: clamp(31px, calc(31px + 13 * (100vw - 390px) / 890), 44px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.005em;
+}
+
+@utility type-headline-md {
+  font-family: var(--font-headline-md);
+  font-size: clamp(26px, calc(26px + 6 * (100vw - 390px) / 890), 32px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+@utility type-headline-sm {
+  font-family: var(--font-headline-sm);
+  font-size: clamp(22px, calc(22px + 2 * (100vw - 390px) / 890), 24px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+@utility type-title-md {
+  font-family: var(--font-title-md);
+  font-size: clamp(18px, calc(18px + 2 * (100vw - 390px) / 890), 20px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@utility type-body-lg {
+  font-family: var(--font-body-lg);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@utility type-body-md {
+  font-family: var(--font-body-md);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@utility type-body-sm {
+  font-family: var(--font-body-sm);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@utility type-body-strong {
+  font-family: var(--font-body-strong);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@utility type-label-lg {
+  font-family: var(--font-label-lg);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+@utility type-label-md {
+  font-family: var(--font-label-md);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+@utility type-hud-md {
+  font-family: var(--font-hud-md);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@utility type-hud-score {
+  font-family: var(--font-hud-score);
+  font-size: clamp(42px, calc(42px + 14 * (100vw - 390px) / 890), 56px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
